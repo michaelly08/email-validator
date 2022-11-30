@@ -32,6 +32,8 @@ app.get("/email", async (req, res, next) => {
     }
 })
 
-app.listen(3000, ()=> {
-    console.log('running')
+const port = process.env.PORT || 5000;
+
+app.listen(port, ()=> {
+    console.log(`listening on Port: ${port}`)
 })
