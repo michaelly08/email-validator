@@ -22,7 +22,7 @@ async function isEmailValid(email) {
 app.get("/email", async (req, res, next) => {
     try {
         const email = req.query.email;
-        console.log(email)
+        // console.log(email)
         // const { email } = req.body;
         let a = await isEmailValid(email)
         res.send(a)
