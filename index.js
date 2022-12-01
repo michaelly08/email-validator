@@ -5,8 +5,15 @@ const dns = require('dns')
 const emailValidator = require('deep-email-validator');
 var http = require('http');
 var url = require('url');
+const cors = require('cors');
 
 const app = express();
+
+app.use(
+    cors({
+        origin: '*',
+    })
+)
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
