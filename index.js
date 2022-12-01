@@ -19,7 +19,7 @@ async function isEmailValid(email) {
 
 // localhost:3000/email?email=michael.ly2002@gmail.com
 
-app.get("/:email", async (req, res, next) => {
+app.get(["/", "/:email"], async (req, res) => {
     try {
         const email = req.params["email"];
         // console.log(email)
